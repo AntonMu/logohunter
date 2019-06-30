@@ -16,6 +16,7 @@ import test
 import utils
 import pandas as pd
 import numpy as np
+
 sim_threshold = 0.95
 output_txt = 'out.txt'
 
@@ -207,7 +208,7 @@ if __name__ == '__main__':
             text = img_path
             prediction, image = detect_logo(yolo, img_path, save_img = save_img_logo,
                                               save_img_path = FLAGS.output,
-                                              postfix='_houses')
+                                              postfix='_segmented')
 
             text = match_logo(image, prediction, (model, my_preprocess), text,
                       (feat_input, sim_cutoff, bins, cdf_list, input_labels),

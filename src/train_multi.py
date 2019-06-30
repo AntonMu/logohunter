@@ -16,9 +16,9 @@ from keras_yolo3.yolo3.utils import get_random_data
 from PIL import Image
 
 def _main():
-    annotation_path = 'data_train.txt'
-    log_dir = 'keras_yolo3/logs/0001/'
-    classes_path = 'data_classes.txt'
+    annotation_path = 'data_all_train.txt'
+    log_dir = 'keras_yolo3/logs/0002/'
+    classes_path = 'data_all_classes.txt'
     anchors_path = 'keras_yolo3/model_data/yolo_anchors.txt' # 'keras_yolo3.model_data/yolo-tiny_anchors.txt's
     weights_path = 'keras_yolo3/model_data/yolo.h5' # 'keras_yolo3/model_data/yolo-tiny.h5'
 

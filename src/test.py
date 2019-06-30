@@ -28,7 +28,7 @@ def test(filename):
                 "classes_path": 'data_classes.txt',
                 "score" : 0.05,
                 "gpu_num" : 1,
-                "model_image_size" : (416, 416),
+                "model_image_size" : (640, 640),
                 }
                )
     save_img_logo, save_img_match = True, True

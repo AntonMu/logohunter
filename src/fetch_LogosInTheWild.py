@@ -30,6 +30,7 @@ def fetch_url(url_file):
         page = urlopen(req, context=ssl._create_unverified_context()).read()
         with open(file_out, 'wb') as f:
             f.write(page)
+            f.close()
         return True
     except:
         return False
@@ -70,7 +71,7 @@ if __name__ == '__main__':
     Command line options
     '''
     parser.add_argument(
-        '--dir_litw', type=str, default=os.path.join(os.path.pardir, 'data_litw', 'LogosInTheWild-v2', 'data'),
+        '--dir_litw', type=str, default=os.path.join(os.path.pardir, 'data', 'LogosInTheWild-v2', 'data'),
         help='path to Logos In The Wild data/ parent folder. Each subfolder contains a url.txt with links to images'
     )
     args = parser.parse_args()
